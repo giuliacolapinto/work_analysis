@@ -32,19 +32,27 @@ Below are the internal and external stakeholders potentially interested in these
 
 For our analyses, we selected only job postings belonging to ESCO groups 1 to 4, which cover the majority of job offers and typically involve a broader variety of skills.
 
----
 ESCO (the standard taxonomy of the European Community) groups occupations into 10 broad categories at what is known as the first classification level:
-0: Armed Forces
-1: Managers
-2: Professionals
-3: Technicians and Associate Professionals
-4: Clerical Support Workers
-5: Service and Sales Workers
-6: Skilled Agricultural, Forestry and Fishery Workers
-7: Craft and Related Trades Workers
-8: Plant and Machine Operators and Assemblers
-9: Elementary Occupations
----
+
+-   0: Armed Forces
+
+-   1: Managers
+
+-   2: Professionals
+
+-   3: Technicians and Associate Professionals
+
+-   4: Clerical Support Workers
+
+-   5: Service and Sales Workers
+
+-   6: Skilled Agricultural, Forestry and Fishery Workers
+
+-   7: Craft and Related Trades Workers
+
+-   8: Plant and Machine Operators and Assemblers
+
+-   9: Elementary Occupations
 
 ## Part 1: Job Advertisement Trends
 
@@ -83,7 +91,7 @@ For each of these occupations, 100 random postings from 2019 and 100 from 2023 w
 
 -   year: year of posting
 
-## [Potential questions]{.underline}
+## Potential questions
 
 ### First-level ESCO analysis
 
@@ -99,7 +107,7 @@ For each of these occupations, 100 random postings from 2019 and 100 from 2023 w
 
 ### Single-occupation analysis
 
-4.1. What are the most important skills for Statistical, finance and insurance clerks (ESCO level 4 code 4312)? Which skills changed the most between 2019 and 2023? (You may choose any other occupations as well.)
+4.1. What are the most important skills for Statistical, finance and insurance clerks (ESCO level 4 code 4312)? Which skills changed the most between 2019 and 2023?
 
 ### Relevant skills
 
