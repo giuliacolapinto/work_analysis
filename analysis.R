@@ -40,7 +40,7 @@ trend[162,] # Pawnbrokers and money-lenders
 skill <- na.omit(skill)
 str(skill)
 
-# 1.1 With respect to ESCO first level, how are the 4 groups characterised in terms of transversal, professional and digital skills?
+# 2.1.1 With respect to ESCO first level, how are the 4 groups characterised in terms of transversal, professional and digital skills?
 
 sum(skill$idesco_level_1==1)
 
@@ -60,14 +60,14 @@ t4 <- sum(skill$idesco_level_1[skill$skill_type=='Transversal']==4) # 3333
 p4 <- sum(skill$idesco_level_1[skill$skill_type=='Professional']==4) # 8157
 d4 <- sum(skill$idesco_level_1[skill$skill_type=='Digital']==4) # 3548
 
-# 1.2 What are the most requested skills for each of the four groups?
+# 2.1.2 What are the most requested skills for each of the four groups?
 
-which.max(c(t1,p1,t1)) # Transversal
-which.max(c(t2,p2,t2)) # Professional
-which.max(c(t3,p3,t3)) # Professional
-which.max(c(t4,p4,t4)) # Professional
+which.max(c(t1,p1,d1)) # Trasversal
+which.max(c(t2,p2,d2)) # Digital
+which.max(c(t3,p3,d3)) # Professional
+which.max(c(t4,p4,d4)) # Professional
 
-# 2.1 Which skills recorded the highest increase (or decrease) in the number of job ads?
+# 2.2.1 Which skills recorded the highest increase (or decrease) in the number of job ads?
 
 library(tidyverse)
 
@@ -112,7 +112,7 @@ min(s$n_perc)
 which.min(s$n_perc)
 s[26,] # Jboss -90%, excluding NA values
 
-# 3.1 What are the 3 most important skills for each ESCO level 4 occupation?
+# 2.3.1 What are the 3 most important skills for each ESCO level 4 occupation?
 
 most <- skill %>%
   select(esco_level_4,escoskill_level_3) %>%
@@ -121,7 +121,7 @@ most <- skill %>%
   arrange(esco_level_4,desc(n))%>%
   print(n=100)
 
-# 4.1 What are the most requested skills for the occupation "Statistical, finance and insurance clerks" (ESCO 4312)?
+# 2.4.1 What are the most requested skills for the occupation "Statistical, finance and insurance clerks" (ESCO 4312)?
 # Which ones experienced the largest change between 2019 and 2023?
 
 # Most requested skills overall
@@ -158,7 +158,7 @@ spec_diff <- arrange(spec_diff, desc(diff))
 # The skill with the largest increase between 2019 and 2023 is "Analyse call centre activities" with +27 job ads
 # The skill with the largest decrease (excluding NA values) is "Accounting techniques" with -13 job ads
 
-# 5.1 What are the most relevant skills for the occupations:
+# 2.5.1 What are the most relevant skills for the occupations:
 # - "Statistical, finance and insurance clerks" (ESCO level 4, 4312)
 # - "Finance managers" (ESCO level 4, 1211)
 
