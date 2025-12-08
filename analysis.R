@@ -11,7 +11,7 @@ str(trend)
 
 # EXERCISE 1
 
-# A. Which occupation recorded the largest increase (or decrease) in the number of job ads?
+# 1.1 Which occupation recorded the largest increase (or decrease) in the number of job ads?
 
 # Largest increase
 which.max(trend$X2023 - trend$X2019)
@@ -23,7 +23,7 @@ which.min(trend$X2023 - trend$X2019)
 trend[149,] # Software developers
 trend[149,]$X2023 - trend[149,]$X2019 # -36984
 
-# B. Which occupation recorded the highest percentage increase (or decrease) in job ads?
+# 1.2 Which occupation recorded the highest percentage increase (or decrease) in job ads?
 
 # Highest percentage increase
 which.max((trend$X2023 - trend$X2019)/trend$X2019)
@@ -97,7 +97,7 @@ min(s$n)
 which.min(s$n)
 s[305,] # Operate relational database management system
 
-# 2.2 Which skills recorded the largest percentage increase (or decrease)?
+# 2.2.2 Which skills recorded the largest percentage increase (or decrease)?
 
 s$n_perc <- (s$n_23 - s$n_19)/(s$n_19)
 s <- na.omit(s)
@@ -119,7 +119,7 @@ most <- skill %>%
   group_by(esco_level_4, escoskill_level_3) %>%
   summarize(n=n()) %>%
   arrange(esco_level_4,desc(n))%>%
-  print(n=100)
+  print(n=10)
 
 # 2.4.1 What are the most requested skills for the occupation "Statistical, finance and insurance clerks" (ESCO 4312)?
 # Which ones experienced the largest change between 2019 and 2023?
@@ -200,5 +200,7 @@ x_1211$rilevanti <- x_1211$n_group/x_1211$skill_tot
 x_1211 <- arrange(x_1211, desc(rilevanti))
 
 # 100% of the requests for the skill "Manage securities" come from job ads for the role "Finance managers"
+# This skill cannot be taken into consideration as it appears in only one job posting and is irrelevant for the analysis
+
 # 78.9% of the requests for the skill "Control financial resources" come from job ads for this role
 # 61.5% of the requests for the skill "Financial management" come from job ads for this role
